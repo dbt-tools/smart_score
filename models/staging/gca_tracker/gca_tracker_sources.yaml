@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: gca_trackers
+    description: General Coding Assesment Scores 
+    database: PC_FIVETRAN_DB
+    schema: gca_tracker 
+    tables: 
+      - name: akoma_fellows 
+        description: One record per student 
+      - name: mahaba_fellows 
+        description: One record per student
