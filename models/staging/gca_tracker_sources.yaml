@@ -10,3 +10,5 @@ sources:
         description: One record per student 
       - name: mahaba_fellows 
         description: One record per student
+      - name: fellow_demographic_info
+        description: One demographic record per student 
