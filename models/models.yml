@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_akoma
+    description: Multiple records per student
+    columns:
+      - name: first
+        description: Student first name 
+        tests:
+          - not_null
+      - name: last
+        description: Student last name 
+        tests: 
+          - not_null 
+      - name: date
+        description: GCA score for that date 
+      - name: cohort 
+        description: Student's respective cohort 
+
+  - name: stg_mahaba
+    description: Multiple records per student
+    columns:
+      - name: first
+        description: Student first name 
+        tests:
+          - not_null
+      - name: last
+        description: Student last name 
+        tests: 
+          - not_null 
+      - name: date
+        description: GCA score for that date 
+      - name: cohort 
+        description: Student's respective cohort 
+
+
