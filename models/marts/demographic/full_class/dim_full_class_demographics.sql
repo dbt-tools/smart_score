@@ -3,7 +3,7 @@ with class_scores as (
 ),
 
 demographics as (
-    select * from {{ ref('stg_demographics') }}
+    select * from {{ ref('dim_demographics') }}
 ),
 
 class_scores_with_demographics as (

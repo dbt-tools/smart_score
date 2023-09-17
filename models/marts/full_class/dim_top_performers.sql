@@ -5,11 +5,11 @@ with class as (
 top_performers as (
     select 
         full_name,
-        ROUND(AVG(score)) as average_score
+        ROUND(AVG(score)) as average_score, 
+        cohort
     from class 
-    group by full_name
+    group by full_name, cohort
     having AVG(score) >= 700
-    order by average_score desc 
 )
 
-select * from top_performers
+select * from top_performers order by average_score desc
