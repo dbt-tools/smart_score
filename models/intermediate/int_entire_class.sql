@@ -11,7 +11,7 @@ entire_class as (
 ),
 
 date_and_score_formatter as (
-  select CONCAT(first, ' ', last) as full_name, 
+  select CONCAT(first, ' ', last) as full_name,
     case 
         when LEN(score) = 3 THEN score
         else null
@@ -62,12 +62,12 @@ date_and_score_formatter as (
                 '0' || SUBSTRING(date, 4, 1)
             )
         ELSE NULL 
-    END AS date
+    END AS date, cohort 
     from entire_class 
 ), 
 
 final as (
-    select full_name, score, CAST(date as date) as date from date_and_score_formatter
+    select full_name, score, CAST(date as date) as date, cohort from date_and_score_formatter
 )
 
 select * from final 

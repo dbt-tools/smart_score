@@ -9,5 +9,4 @@ formatted_demographics as (
     from demographics
 )
 
-
 select * from formatted_demographics

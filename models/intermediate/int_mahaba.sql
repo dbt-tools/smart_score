@@ -4,4 +4,4 @@
     )
 }}
 
-{{ dbt_utils.unpivot(ref('stg_mahaba'), exclude=['first', 'last'], field_name = "date", value_name="score")}}
+{{ dbt_utils.unpivot(ref('stg_mahaba'), exclude=['first', 'last', 'cohort'], field_name = "date", value_name="score")}}
